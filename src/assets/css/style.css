@@ -5,6 +5,10 @@
     margin: 0 auto;
 }
 
+.top-bar {
+    backdrop-filter: blur(40px);
+}
+
 .hero {
     background: radial-gradient(78.91% 78.91% at 50% 50%, #11172B 32.67%, #070A15 100%);
     border: 4px solid rgba(56, 132, 247, 0.2);
@@ -37,10 +41,25 @@ html {
     color: white;
 }
 
-.user-select{
+.user-select {
     backdrop-filter: blur(13px);
     border: 2px solid #5078EE;
 }
-.user-img{
+
+.user-img {
     transform: translateY(-50%);
+}
+
+.prizemoney {
+    background: radial-gradient(62.74% 93.22% at 50% 0%, #D84F46 0%, #6A2222 100%);
+    box-shadow: 0px 0px 2.88915px rgba(0, 0, 0, 0.57), 0px 10.112px 39.0036px rgba(0, 0, 0, 0.66), inset 0px -4px 4px rgba(218, 91, 84, 0.2), inset 0px 4px 4px rgba(0, 0, 0, 0.31);
+    backdrop-filter: blur(14.4458px);
+    border-radius: 28px 28px 32px 32px;
+    border: 2px solid rgba(255, 200, 0, 0.64);
+}
+
+.winning-btns {
+    background: linear-gradient(180deg, #22346D 0%, #1B2852 100%);
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
 }
