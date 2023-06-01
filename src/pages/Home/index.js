@@ -1,5 +1,6 @@
 import React from 'react'
 import Hero from '../../components/hero'
+import Table from '../../components/table'
 import TopBar from '../../components/topbar'
 
 const Home = () => {
@@ -7,6 +8,7 @@ const Home = () => {
         <div>
             <TopBar/>
             <Hero/>
+            <Table/>
         </div>
     )
 }
