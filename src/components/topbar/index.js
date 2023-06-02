@@ -10,7 +10,7 @@ const TopBar = ({setVisiblePastWinners, visiblePastWinners}) => {
         setVisiblePastWinners(!visiblePastWinners)
     }
     return (
-        <div className='top-bar bg-[#11172b80] fixed top-0 left-0 w-full z-10 py-[24px]'>
+        <div className='top-bar bg-[#11172b80] fixed top-0 left-0 w-full z-30 py-[24px]'>
             <div className='custom-container'>
                 <div className='flex justify-between items-center'>
                     <img src={logo} alt='logo' />
