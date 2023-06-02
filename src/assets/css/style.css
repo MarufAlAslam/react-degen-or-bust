@@ -70,7 +70,7 @@ html {
 
 }
 
-.tablee{
+.tablee {
     background: url("../images/table-bg.png");
     background-size: 100%;
     background-position: right center;
@@ -85,4 +85,11 @@ html {
 
     border-radius: 23.9998px 11.9999px;
     padding: 24px 32px;
+}
+
+.past-winners {
+    background: #11172B;
+    box-shadow: 0px 4px 64px rgba(0, 0, 0, 0.5);
+    border-radius: 24px;
+    border: 2px solid #6F97F4;
 }
