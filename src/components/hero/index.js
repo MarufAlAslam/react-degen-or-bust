@@ -3,7 +3,10 @@ import money from '../../assets/images/money.png'
 import hex from '../../assets/images/hex.png'
 import circuit from '../../assets/images/circuit.png'
 
-const Hero = () => {
+const Hero = ({visiblePlay, setVisiblePlay}) => {
+    const playNow = () => {
+        setVisiblePlay(!visiblePlay)
+    }
     return (
         <div className='hero'>
             <div className='custom-container'>
@@ -52,7 +55,7 @@ const Hero = () => {
 
                     <div className='text-center mb-[55px] relative'>
                         <img src={circuit} alt='circuit' className='mx-auto' />
-                        <button className='text-white text-2xl font-bold play-btn rounded-full py-[16px] px-[80px] absolute z-20 top-[60%] left-[50%] translate-x-[-50%] translate-y-[-50%]'>
+                        <button onClick={playNow} className='text-white text-2xl font-bold play-btn rounded-full py-[16px] px-[80px] absolute z-20 top-[60%] left-[50%] translate-x-[-50%] translate-y-[-50%]'>
                             Play now
                         </button>
                     </div>
