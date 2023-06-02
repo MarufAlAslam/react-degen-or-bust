@@ -5,6 +5,7 @@ import FaqModal from '../../components/modals/faq-modal'
 import HowToPlay from '../../components/modals/how-to-play'
 import PastWinners from '../../components/modals/past-winners'
 import InitiatePlay from '../../components/modals/play-modals/initiate-play'
+import Responsibility from '../../components/modals/responsibility/indes'
 import Table from '../../components/table'
 import TopBar from '../../components/topbar'
 
@@ -13,16 +14,20 @@ const Home = () => {
     const [visiblePlay, setVisiblePlay] = React.useState(false)
     const [visibleFaq, setVisibleFaq] = React.useState(false)
     const [visibleHowToPlay, setVisibleHowToPlay] = React.useState(false)
+    const [visibleResponsibility, setVisibleResponsibility] = React.useState(false)
     return (
         <div>
             {
-                visiblePlay && (<InitiatePlay setVisiblePlay={setVisiblePlay}/>)
+                visiblePlay && (<InitiatePlay setVisiblePlay={setVisiblePlay} />)
             }
             {
-                (visibleFaq && <FaqModal setVisibleFaq={setVisibleFaq}/>)
+                (visibleFaq && <FaqModal setVisibleFaq={setVisibleFaq} />)
             }
             {
-                (visibleHowToPlay && <HowToPlay setVisibleHowToPlay={setVisibleHowToPlay}/>)
+                (visibleHowToPlay && <HowToPlay setVisibleHowToPlay={setVisibleHowToPlay} />)
+            }
+            {
+                (visibleResponsibility && <Responsibility setVisibleResponsibility={setVisibleResponsibility} />)
             }
             <TopBar setVisiblePastWinners={setVisiblePastWinners} visiblePastWinners={visiblePastWinners} />
             {visiblePastWinners && (
@@ -32,7 +37,7 @@ const Home = () => {
             )}
             <Hero setVisiblePlay={setVisiblePlay} visiblePlay={visiblePlay} />
             <Table />
-            <Footer setVisibleFaq={setVisibleFaq} setVisibleHowToPlay={setVisibleHowToPlay} />
+            <Footer setVisibleFaq={setVisibleFaq} setVisibleHowToPlay={setVisibleHowToPlay} setVisibleResponsibility={setVisibleResponsibility} />
         </div>
     )
 }

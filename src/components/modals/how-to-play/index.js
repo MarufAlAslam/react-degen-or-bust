@@ -1,7 +1,5 @@
 import React from 'react'
 
-import { FiArrowUpRight } from 'react-icons/fi'
-
 const HowToPlay = ({ setVisibleHowToPlay }) => {
     const handleFaq = () => {
         setVisibleHowToPlay(false)

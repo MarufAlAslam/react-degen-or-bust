@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Footer = ({setVisibleFaq, setVisibleHowToPlay}) => {
+const Footer = ({setVisibleFaq, setVisibleHowToPlay, setVisibleResponsibility}) => {
     return (
         <div className='footer pb-[48px]'>
             <div className='custom-container'>
@@ -9,7 +9,7 @@ const Footer = ({setVisibleFaq, setVisibleHowToPlay}) => {
                     <span>•</span>
                     <button onClick={()=>setVisibleHowToPlay(true)}>How to Play</button>
                     <span>•</span>
-                    <button>Degen or Bust responsibly</button>
+                    <button onClick={()=>setVisibleResponsibility(true)}>Degen or Bust responsibly</button>
                 </div>
             </div>
         </div>
