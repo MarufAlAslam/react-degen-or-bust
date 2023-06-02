@@ -1,4 +1,5 @@
 import React from 'react'
+import { FaArrowLeft } from 'react-icons/fa'
 
 const Responsibility = ({ setVisibleResponsibility }) => {
     const handleFaq = () => {
@@ -15,14 +16,17 @@ const Responsibility = ({ setVisibleResponsibility }) => {
     return (
         <>
             <div onClick={handleFaq} className='modal-overlay fixed w-full h-screen top-0 left-0 z-20 bg-transparent'></div>
-            <div className='initiate-play max-w-[700px] w-full fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] z-40'>
+            <div className='initiate-play modal max-w-[700px] w-full fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] z-40'>
                 <div className='modal-header flex justify-between items-center py-[24px] text-center px-[24px]'>
+                <button onClick={handleFaq} className="text-white md:hidden block">
+                        <FaArrowLeft/>
+                    </button>
                     <h2 className='text-white text-center text-[40px] font-bold w-full'>
                         Degen or Bust reponsibily
                     </h2>
                 </div>
 
-                <div className='modal-body py-[40px] px-[56px] h-[75vh] overflow-y-scroll'>
+                <div className='modal-body md:py-[40px] md:px-[56px] p-[10px] md:h-[75vh] h-[80vh] overflow-y-scroll'>
                     <p className='text-lg text-[#E4E4E4] font-light mb-[30px]'>
                         DOB is a fun game on the Polygon network and we want all of our players to play responsibly. Please only play with MATIC you are comfortable parting with that won’t impact your well-being.
                     </p>

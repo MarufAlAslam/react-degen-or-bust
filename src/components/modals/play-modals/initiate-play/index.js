@@ -22,12 +22,12 @@ const InitiatePlay = ({ setVisiblePlay }) => {
     return (
         <>
             <div onClick={hideModal} className='modal-overlay fixed w-full h-screen top-0 left-0 z-20 bg-transparent'></div>
-            <div className='initiate-play max-w-[700px] w-full fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] z-40'>
+            <div className='initiate-play max-w-[700px] w-full fixed md:top-[50%] top-[100%] left-[50%] translate-x-[-50%] md:translate-y-[-50%] translate-y-[-100%] z-40'>
                 <div className='modal-header flex justify-between items-center py-[24px] text-center px-[24px]'>
                     {
                         start && <button onClick={handleStart}><FiArrowLeft className='text-white text-xl' /></button>
                     }
-                    <img src={powerball} alt='powerball' className='mx-auto' />
+                    <img src={powerball} alt='powerball' className='mx-auto md:w-auto w-1/2' />
                     {
                         start && <button onClick={handleShuffle}>
                             <RxShuffle className="text-white text-xl" />
@@ -36,7 +36,7 @@ const InitiatePlay = ({ setVisiblePlay }) => {
                 </div>
                 {
                     start ? (
-                        <div className='modal-body py-[40px] px-[56px]'>
+                        <div className='modal-body md:py-[40px] md:px-[56px] p-[10px]'>
                             <div className='flex justify-center items-center gap-[16px]'>
                                 <div className={`${selected[0] ? "selected-ball" : "not-selected-ball"} rounded-full w-[40px] h-[40px] flex justify-center items-center`}>
                                     <p className='text-white text-lg font-[500]'>
@@ -76,7 +76,7 @@ const InitiatePlay = ({ setVisiblePlay }) => {
                             </div>
 
                             <div className='py-[40px]'>
-                                <div className='grid grid-cols-11'>
+                                <div className='grid md:grid-cols-11 grid-cols-7'>
                                     <div className='col-span-1 border border-[#192D54]'>
                                         <button onClick={(e) => {
                                             setSelected([...selected, 1])
@@ -450,37 +450,37 @@ const InitiatePlay = ({ setVisiblePlay }) => {
                             </div>
                         </div>
                     ) : (
-                        <div className='modal-body py-[40px] px-[56px]'>
-                            <div className='text-center mb-[80px]'>
-                                <h2 className='text-5xl font-bold text-white'>
-                                    <span className='text-[32px]'>$</span>149,000,000
+                        <div className='modal-body md:py-[40px] md:px-[56px] p-[10px]'>
+                            <div className='text-center md:mb-[80px] mb-[40px]'>
+                                <h2 className='md:text-5xl text-2xl font-bold text-white'>
+                                    <span className='md:text-[32px]'>$</span>149,000,000
                                 </h2>
                                 <p className='font-light text-[#959EBA] mt-[16px]'>Saturday 9:59</p>
                             </div>
 
                             <div className='grid grid-cols-2 gap-[16px]'>
                                 <div className='col-span-2'>
-                                    <button onClick={handleStart} className='play-btn py-[12px] text-white text-xl font-[500] w-full'>
+                                    <button onClick={handleStart} className='play-btn py-[12px] text-white md:text-xl text-sm font-[500] w-full'>
                                         Pick your own numbers
                                     </button>
                                 </div>
                                 <div className='col-span-1'>
-                                    <button className='play-btn py-[12px] text-white text-xl font-[500] w-full'>
+                                    <button className='play-btn py-[12px] text-white md:text-xl text-sm font-[500] w-full'>
                                         $2 Quick Pick
                                     </button>
                                 </div>
                                 <div className='col-span-1'>
-                                    <button className='play-btn py-[12px] text-white text-xl font-[500] w-full'>
+                                    <button className='play-btn py-[12px] text-white md:text-xl text-sm font-[500] w-full'>
                                         $10 Quick Pick
                                     </button>
                                 </div>
                                 <div className='col-span-1'>
-                                    <button className='play-btn py-[12px] text-white text-xl font-[500] w-full'>
+                                    <button className='play-btn py-[12px] text-white md:text-xl text-sm font-[500] w-full'>
                                         $20 Quick Pick
                                     </button>
                                 </div>
                                 <div className='col-span-1'>
-                                    <button className='play-btn py-[12px] text-white text-xl font-[500] w-full'>
+                                    <button className='play-btn py-[12px] text-white md:text-xl text-sm font-[500] w-full'>
                                         Other Amounts
                                     </button>
                                 </div>

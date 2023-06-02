@@ -29,10 +29,10 @@ const Home = () => {
             {
                 (visibleResponsibility && <Responsibility setVisibleResponsibility={setVisibleResponsibility} />)
             }
-            <TopBar setVisiblePastWinners={setVisiblePastWinners} visiblePastWinners={visiblePastWinners} />
+            <TopBar setVisiblePastWinners={setVisiblePastWinners} visiblePastWinners={visiblePastWinners} setVisibleFaq={setVisibleFaq} setVisibleHowToPlay={setVisibleHowToPlay} setVisibleResponsibility={setVisibleResponsibility} />
             {visiblePastWinners && (
                 <div className='relative'>
-                    <PastWinners />
+                    <PastWinners setVisiblePastWinners={setVisiblePastWinners} />
                 </div>
             )}
             <Hero setVisiblePlay={setVisiblePlay} visiblePlay={visiblePlay} />

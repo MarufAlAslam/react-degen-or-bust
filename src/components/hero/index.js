@@ -55,7 +55,7 @@ const Hero = ({visiblePlay, setVisiblePlay}) => {
 
                     <div className='text-center mb-[55px] relative'>
                         <img src={circuit} alt='circuit' className='mx-auto' />
-                        <button onClick={playNow} className='text-white text-2xl font-bold play-btn rounded-full py-[16px] px-[80px] absolute z-20 top-[60%] left-[50%] translate-x-[-50%] translate-y-[-50%]'>
+                        <button onClick={playNow} className='text-white md:text-2xl font-bold play-btn rounded-full md:py-[16px] py-[10px] md:px-[80px] px-[30px] absolute z-20 top-[60%] left-[50%] translate-x-[-50%] translate-y-[-50%]'>
                             Play now
                         </button>
                     </div>
