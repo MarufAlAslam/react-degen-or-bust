@@ -22,7 +22,7 @@ const Responsibility = ({ setVisibleResponsibility }) => {
                         <FaArrowLeft/>
                     </button>
                     <h2 className='text-white text-center text-[40px] font-bold w-full'>
-                        Degen or Bust reponsibily
+                        Degen or Bust responsibly 
                     </h2>
                 </div>
 

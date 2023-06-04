@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../../assets/images/logo.svg";
 import mic from "../../assets/images/mic.svg";
+import micOff from "../../assets/images/mic-off.svg";
 import user from "../../assets/images/user.png";
 
 import twitter from "../../assets/images/twitter.svg";
@@ -10,6 +11,7 @@ import { HiSpeakerWave, HiSpeakerXMark } from "react-icons/hi2";
 
 import { FaAngleDown, FaAngleUp, FaBars } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
+
 
 const TopBar = ({
   setVisiblePastWinners,
@@ -57,7 +59,7 @@ const TopBar = ({
               onClick={handlePastWinners}
               className="btn-blue flex justify-center items-center rounded-full border-none overflow-hidden"
             >
-              Past Winner
+              Past Winners
               {visiblePastWinners ? (
                 <FaAngleUp className="ml-[8px]" />
               ) : (
@@ -84,7 +86,14 @@ const TopBar = ({
                   </div>
                 </form>
                 <button className="ml-[16px]">
-                  <img src={mic} alt="mic" />
+                  {
+                    muted ? (
+                      <img src={micOff} alt="mic" onClick={() => setMuted(!muted)} />
+                    ) : (
+                      <img src={mic} alt="mic" onClick={() => setMuted(!muted)} />
+                    )
+                  }
+                  {/* <img src={mic} alt="mic" /> */}
                 </button>
               </>
             ) : (
