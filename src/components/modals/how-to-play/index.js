@@ -30,7 +30,7 @@ const HowToPlay = ({ setVisibleHowToPlay }) => {
     return (
         <>
             <div onClick={handleFaq} className='modal-overlay fixed w-full h-screen top-0 left-0 z-20 bg-transparent'></div>
-            <div className='initiate-play modal max-w-[700px] w-full fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] z-40'>
+            <div className='initiate-play modal max-w-[700px] w-full fixed md:top-[50%] top-0 left-[50%] translate-x-[-50%] md:translate-y-[-50%] z-40'>
                 <div className='modal-header flex justify-between items-center py-[24px] text-center px-[10px]'>
                     <button onClick={handleFaq} className="text-white md:hidden block">
                         <FaArrowLeft />
