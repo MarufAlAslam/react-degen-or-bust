@@ -11,7 +11,7 @@ const Footer = ({
     <div className="footer pb-[48px]">
       <div className="custom-container">
         <div className="flex justify-between items-center">
-          <div className="flex justify-start items-center gap-4">
+          <div className="md:flex hidden justify-start items-center gap-4">
             <a href="https://twitter.com/">
               <img src={twitter} alt="twitter" />
             </a>
@@ -19,7 +19,7 @@ const Footer = ({
               <img src={discord} alt="discord" />
             </a>
           </div>
-          <div>
+          <div className="flex justify-center items-center md:w-auto w-full">
             <div className="flex justify-center items-center text-[#CAD2E5] gap-[10px] text-xl font-normal">
               <button onClick={() => setVisibleFaq(true)}>FAQ</button>
               <span>•</span>
@@ -32,7 +32,7 @@ const Footer = ({
               </button>
             </div>
           </div>
-          <div className="flex justify-start items-center gap-4 opacity-0">
+          <div className="md:flex hidden justify-start items-center gap-4 opacity-0">
             <a href="https://twitter.com/">
               <img src={twitter} alt="twitter" />
             </a>

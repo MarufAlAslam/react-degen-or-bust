@@ -211,4 +211,10 @@ html {
     border-radius: 0;
     height: 100vh;
   }
+  .hero {
+    border-radius: 0 0 100px 100px;
+  }
+  .custom-table p.text-2xl {
+    font-size: 20px;
+  }
 }

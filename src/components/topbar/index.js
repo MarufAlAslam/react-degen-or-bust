@@ -88,7 +88,10 @@ const TopBar = ({
                 </button>
               </>
             ) : (
-              <button className="connect-btn flex justify-center items-center rounded-full" onClick={()=>setWalletConnected(true)}>
+              <button
+                className="connect-btn flex justify-center items-center rounded-full"
+                onClick={() => setWalletConnected(true)}
+              >
                 Connect Wallet
               </button>
             )}
@@ -123,9 +126,26 @@ const TopBar = ({
                 </div>
 
                 <div className="text-center w-full">
-                  <button className="btn-blue flex justify-center items-center rounded-full mb-[16px] mx-auto">
-                    Connect Wallet
-                  </button>
+                  {walletConnected ? (
+                    <div className="flex justify-center items-center gap-3">
+                      <form>
+                        <div className="flex search-holder relative">
+                          <img
+                            src={user}
+                            className="user-img absolute left-0 z-10 top-[50%]"
+                            alt="user"
+                          />
+                          <select className="user-select bg-[#18213E] py-[8px] text-[#5078EE] pl-[45px] pr-[36px] rounded-full">
+                            <option>neonsalami.eth</option>
+                          </select>
+                        </div>
+                      </form>
+                    </div>
+                  ) : (
+                    <button className="btn-blue flex justify-center items-center rounded-full mb-[16px] mx-auto" onClick={()=>setWalletConnected(true)}>
+                      Connect Wallet
+                    </button>
+                  )}
 
                   <div className="bg-[#435e92] h-[1px] w-full mb-[16px] mt-[32px]"></div>
                   <button onClick={handlePastWinners} className="text-white">

@@ -31,7 +31,7 @@ const HowToPlay = ({ setVisibleHowToPlay }) => {
         <>
             <div onClick={handleFaq} className='modal-overlay fixed w-full h-screen top-0 left-0 z-20 bg-transparent'></div>
             <div className='initiate-play modal max-w-[700px] w-full fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] z-40'>
-                <div className='modal-header flex justify-between items-center py-[24px] text-center px-[24px]'>
+                <div className='modal-header flex justify-between items-center py-[24px] text-center px-[10px]'>
                     <button onClick={handleFaq} className="text-white md:hidden block">
                         <FaArrowLeft />
                     </button>
@@ -45,7 +45,7 @@ const HowToPlay = ({ setVisibleHowToPlay }) => {
                     <div>
                         {
                             list.map((item, index) => (
-                                <div className='flex justify-start items-start'>
+                                <div className='flex justify-start items-start' key={index}>
                                     <span className='block text-[#E4E4E4] text-lg'>{index + 1}. </span>
                                     <p className='text-lg text-[#E4E4E4] ml-[8px] font-light'>
                                         {item}

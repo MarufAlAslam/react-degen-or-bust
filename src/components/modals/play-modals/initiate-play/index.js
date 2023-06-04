@@ -22,7 +22,7 @@ const InitiatePlay = ({ setVisiblePlay }) => {
     return (
         <>
             <div onClick={hideModal} className='modal-overlay fixed w-full h-screen top-0 left-0 z-20 bg-transparent'></div>
-            <div className='initiate-play max-w-[700px] w-full fixed md:top-[50%] top-[100%] left-[50%] translate-x-[-50%] md:translate-y-[-50%] translate-y-[-100%] z-40'>
+            <div className='initiate-play md:pb-0 pb-4 max-w-[700px] w-full fixed md:top-[50%] top-[100%] left-[50%] translate-x-[-50%] md:translate-y-[-50%] translate-y-[-100%] z-40'>
                 <div className='modal-header flex justify-between items-center py-[24px] text-center px-[24px]'>
                     {
                         start && <button onClick={handleStart}><FiArrowLeft className='text-white text-xl' /></button>

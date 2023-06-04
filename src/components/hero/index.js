@@ -12,8 +12,8 @@ const Hero = ({visiblePlay, setVisiblePlay}) => {
             <div className='custom-container'>
                 <div className='text-center'>
                     <img src={money} alt='money' className='mx-auto' />
-                    <div className='prizemoney inline-block py-[10px] px-[36px] relative top-[-250px] mb-[-250px]'>
-                        <h2 className='text-white text-5xl font-bold'><span className='text-[32px]'>$</span>3,204,080</h2>
+                    <div className='prizemoney inline-block py-[10px] px-[36px] relative md:top-[-250px] top-[-100px] mb-[-250px]'>
+                        <h2 className='text-white md:text-5xl text-2xl font-bold'><span className='md:text-[32px] text-lg'>$</span>3,204,080</h2>
                         <p className='italic text-lg text-white'>Prize pool</p>
                     </div>
 
