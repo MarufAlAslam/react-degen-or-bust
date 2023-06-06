@@ -51,7 +51,7 @@ const PastWinners = ({ setVisiblePastWinners }) => {
     },
   ];
   return (
-    <div className="past-winners max-w-[100%] w-[825px] px-[24px] pt-[40px] pb-[16px] fixed top-[90px] md:z-20 z-50 left-[50%] translate-x-[-50%]">
+    <div className="past-winners max-w-[100%] w-[825px] px-[24px] pt-[40px] pb-[16px] fixed top-[90px] md:z-50 z-50 left-[50%] translate-x-[-50%]">
       <div className="md:hidden block back p-4 mb-[20px] text-white">
         <div className="flex justify-between items-center text-center">
           <button
