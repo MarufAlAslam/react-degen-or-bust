@@ -1,21 +1,26 @@
 import React from "react";
 import { FaArrowLeft } from "react-icons/fa";
 
-const UseNft = ({ setVisibleUseNft }) => {
-  const handleFaq = () => {
+const UseNft = ({ setVisibleUseNft, setVisibleSelectNft }) => {
+  const handleNo = () => {
     setVisibleUseNft(false);
+  };
+
+  const handleYes = () => {
+    setVisibleUseNft(false);
+    setVisibleSelectNft(true);
   };
 
   const ntfData = ["1 x Common NFT", "2 x Rare NFT", "1 x Legendary NFT"];
   return (
     <>
       <div
-        onClick={handleFaq}
+        onClick={handleNo}
         className="modal-overlay fixed w-full h-screen top-0 left-0 z-20 bg-black opacity-50"
       ></div>
       <div className="initiate-play modal max-w-[700px] w-full fixed md:top-[50%] top-0 left-[50%] translate-x-[-50%] md:translate-y-[-50%] z-40">
         <div className="modal-header flex justify-between items-center py-[24px] text-center px-[10px]">
-          <button onClick={handleFaq} className="text-white md:hidden block">
+          <button onClick={handleNo} className="text-white md:hidden block">
             <FaArrowLeft />
           </button>
           <h2 className="text-white text-center text-[40px] font-bold w-full">
@@ -40,13 +45,13 @@ const UseNft = ({ setVisibleUseNft }) => {
 
           <div className="mt-[32px] flex justify-between items-center text-center">
             <button
-              onClick={handleFaq}
+              onClick={handleYes}
               className="btn-gotit flex justify-center items-center rounded-full text-white text-xl mx-auto px-[84px] py-[12px]"
             >
               Yes
             </button>
             <button
-              onClick={handleFaq}
+              onClick={handleNo}
               className="btn-no flex justify-center items-center rounded-full text-white text-xl mx-auto px-[84px] py-[12px]"
             >
               No

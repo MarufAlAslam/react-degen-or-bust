@@ -2,9 +2,13 @@ import React from "react";
 import left from "../../../assets/images/left.png";
 import right from "../../../assets/images/right.png";
 import UseNft from "../../modals/useNfts";
+import SelectNft from "../../modals/select-nft";
+import NewInitiatePlay from "../../modals/play-modals/new-initiate-play";
 
 const Top = () => {
   const [visibleUseNft, setVisibleUseNft] = React.useState(false);
+  const [visibleSelectNft, setVisibleSelectNft] = React.useState(false);
+  const [visibleInitiatePlay, setVisibleInitiatePlay] = React.useState(false);
 
   const handleMint = (e) => {
     e.preventDefault();
@@ -13,7 +17,21 @@ const Top = () => {
   return (
     <div className="top new-top py-[70px] h-[60vh] relative">
       {/* modals */}
-      {visibleUseNft && <UseNft setVisibleUseNft={setVisibleUseNft} />}
+      {visibleUseNft && (
+        <UseNft
+          setVisibleUseNft={setVisibleUseNft}
+          setVisibleSelectNft={setVisibleSelectNft}
+        />
+      )}
+      {visibleSelectNft && (
+        <SelectNft
+          setVisibleSelectNft={setVisibleSelectNft}
+          setVisibleInitiatePlay={setVisibleInitiatePlay}
+        />
+      )}
+      {visibleInitiatePlay && (
+        <NewInitiatePlay setVisiblePlay={setVisibleInitiatePlay} />
+      )}
       {/* modals */}
 
       <img src={left} className="absolute left-0 bottom-0" alt="" />
