@@ -173,8 +173,68 @@ html {
   padding: 8px 16px;
 }
 
+.bottom-card .card-body {
+  display: flex;
+  width: 100%;
+  height: auto;
+  padding: 24px 16px 16px 16px;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: radial-gradient(50% 50% at 50% 50%, #1a2750 0%, #18213e 100%);
+  box-shadow: 0px 4px 10px 0px rgba(125, 25, 224, 0.6), 0px 2px 4px 0px #7d19e0,
+    0px -4px 10px 0px rgba(48, 159, 240, 0.6), 0px -2px 4px 0px #309ff0;
+}
 
+.bottom-card .card-header {
+  display: flex;
+  width: 100%;
+  padding: 5.778px 34.67px 11.557px 34.67px;
+  flex-direction: column;
+  align-items: center;
+  gap: 5.778px;
+  border-radius: 28px 28px 32px 32px;
+  border: 2px solid #ffc700;
+  background: radial-gradient(
+    62.74% 93.22% at 50% 0%,
+    #a13932 0%,
+    #501c1c 100%
+  );
+  box-shadow: 0px 10.11203px 39.00356px 0px rgba(0, 0, 0, 0.66),
+    0px 0px 2.88915px 0px rgba(0, 0, 0, 0.57),
+    0px 4px 4px 0px rgba(0, 0, 0, 0.31) inset,
+    0px -4px 4px 0px rgba(218, 91, 84, 0.2) inset;
+  backdrop-filter: blur(14.445762634277344px);
+  position: relative;
+  top: 10px;
+  margin-top: -10px;
+}
+.container {
+  max-width: 1280px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.mint-btn-new:hover {
+  /* Button Shadows/Button - 4dp - Shadow */
+  box-shadow: 0px 4px 8px 0px rgba(50, 50, 71, 0.06),
+    0px 4px 4px 0px rgba(50, 50, 71, 0.08);
+}
 
+.btn-no {
+  border-radius: 50px;
+  background: linear-gradient(
+    187deg,
+    #6d96f3 6.23%,
+    #92a5d0 9.92%,
+    #494a73 92.16%
+  );
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25),
+    0px 1px 1px 0px rgba(255, 255, 255, 0.25) inset,
+    0px -1px 1px 0px rgba(0, 0, 0, 0.25) inset;
+}
 
 @media screen and (max-width: 767px) {
   .mobile-menu,
