@@ -13,6 +13,10 @@ const NewInitiatePlay = ({ setVisiblePlay }) => {
     setVisiblePlay(false);
   };
 
+  const cancelModal = () => {
+    setVisiblePlay(false);
+  };
+
   const handleStart = () => {
     setStart(!start);
     setSelected([]);
@@ -77,7 +81,7 @@ const NewInitiatePlay = ({ setVisiblePlay }) => {
         className="modal-overlay fixed w-full h-screen top-0 left-0 z-20 bg-black opacity-50"
       ></div>
       {start ? (
-        <div className="initiate-play modal max-w-[700px] w-full fixed md:top-[50%] top-0 left-[50%] translate-x-[-50%] md:translate-y-[-50%] z-40">
+        <div className="initiate-play init-new-modal modal max-w-[700px] w-full fixed md:top-[50%] top-0 left-[50%] translate-x-[-50%] md:translate-y-[-50%] z-40">
           <div className="modal-header flex justify-between items-center py-[24px] text-center px-[10px]">
             <button onClick={handleStart} className="text-white">
               <FaArrowLeft />
@@ -101,9 +105,9 @@ const NewInitiatePlay = ({ setVisiblePlay }) => {
           </div>
         </div>
       ) : (
-        <div className="initiate-play md:pb-0 pb-4 max-w-[700px] w-full fixed md:top-[50%] top-[100%] left-[50%] translate-x-[-50%] md:translate-y-[-50%] translate-y-[-100%] z-40">
+        <div className="initiate-play init-new-modal md:pb-0 pb-4 max-w-[700px] w-full fixed md:top-[50%] top-[100%] left-[50%] translate-x-[-50%] md:translate-y-[-50%] translate-y-[-100%] z-40">
           <div className="modal-header flex justify-between items-center py-[24px] text-center px-[24px]">
-            <button onClick={handleStart}>
+            <button onClick={cancelModal}>
               <FiArrowLeft className="text-white text-xl" />
             </button>
             <img

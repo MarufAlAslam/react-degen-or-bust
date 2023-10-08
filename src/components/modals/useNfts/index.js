@@ -43,7 +43,7 @@ const UseNft = ({ setVisibleUseNft, setVisibleSelectNft }) => {
             Do you want to use any of these NFTs today?
           </p>
 
-          <div className="mt-[32px] flex justify-between items-center text-center">
+          <div className="mt-[32px] flex md:flex-row flex-col gap-3 justify-between items-center text-center">
             <button
               onClick={handleYes}
               className="btn-gotit flex justify-center items-center rounded-full text-white text-xl mx-auto px-[84px] py-[12px]"

@@ -34,10 +34,10 @@ const Top = () => {
       )}
       {/* modals */}
 
-      <img src={left} className="absolute left-0 bottom-0" alt="" />
-      <img src={right} className="absolute right-0 bottom-0" alt="" />
+      <img src={left} className="absolute left-0 bottom-0 lg:block hidden" alt="" />
+      <img src={right} className="absolute right-0 bottom-0 lg:block hidden" alt="" />
       <div className="text-center">
-        <h2 className="text-white text-5xl">Name of the NFT project</h2>
+        <h2 className="text-white md:text-5xl text-3xl">Name of the NFT project</h2>
         <form
           onSubmit={handleMint}
           action=""

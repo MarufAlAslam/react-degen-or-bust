@@ -301,6 +301,10 @@ html {
   .custom-table p.text-2xl {
     font-size: 20px;
   }
+  .init-new-modal{
+    height: 100vh;
+    overflow-y: scroll;
+  }
 }
 
 @media screen and (max-width: 700px) {
